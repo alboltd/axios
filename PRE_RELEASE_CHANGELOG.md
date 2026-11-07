@@ -23,6 +23,8 @@
 
 ## Maintenance
 
+- **Docs build security:** Pinned the docs toolchain to a patched Vite 6 release to address its development-server advisories. The website build remains on VitePress 1; runtime dependencies and the Axios public API are unchanged.
+
 - **Test dependency security:** Updated vulnerable npm lockfile copies used by the root lint tooling and the CJS smoke and module test suites. Scoped overrides keep patched versions in those development tools; runtime dependencies and the public API are unchanged.
 
 - **Cancellation lifecycle regression coverage:** Added Node HTTP/Fetch and browser XHR tests for cancellation inside asynchronous request interceptors and successful reuse of an Axios instance after an in-flight cancellation, using AbortSignal, CancelToken, and both together. Added deterministic signal-composition tests for timeout/cancellation precedence and subscription cleanup. Runtime behavior, public APIs, and types are unchanged.
