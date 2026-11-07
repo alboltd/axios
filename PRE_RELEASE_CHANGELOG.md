@@ -23,6 +23,8 @@
 
 ## Maintenance
 
+- **Test dependency security:** Updated vulnerable npm lockfile copies used by the root lint tooling and the CJS smoke and module test suites. Scoped overrides keep patched versions in those development tools; runtime dependencies and the public API are unchanged.
+
 - **Cancellation lifecycle regression coverage:** Added Node HTTP/Fetch and browser XHR tests for cancellation inside asynchronous request interceptors and successful reuse of an Axios instance after an in-flight cancellation, using AbortSignal, CancelToken, and both together. Added deterministic signal-composition tests for timeout/cancellation precedence and subscription cleanup. Runtime behavior, public APIs, and types are unchanged.
 
 <!-- Record test-only changes, internal refactors, tooling, dependency updates, and CI changes without a user-visible behavior change here. -->
