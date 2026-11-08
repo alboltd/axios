@@ -23,6 +23,8 @@
 
 ## Maintenance
 
+- **CJS test dependency security:** Replaced Mocha versions that pulled vulnerable `serialize-javascript` into the CJS module and smoke test lockfiles with Mocha 7.2.0. Scoped overrides keep its `glob`, `minimatch`, and `js-yaml` dependencies on patched releases while preserving the CJS test matrix down to Node.js 12. This changes test tooling only; runtime dependencies and the public API are unchanged.
+
 - **Docs build security:** Pinned the docs toolchain to a patched Vite 6 release to address its development-server advisories. The website build remains on VitePress 1; runtime dependencies and the Axios public API are unchanged.
 
 - **Test dependency security:** Updated vulnerable npm lockfile copies used by the root lint tooling and the CJS smoke and module test suites. Scoped overrides keep patched versions in those development tools; runtime dependencies and the public API are unchanged.

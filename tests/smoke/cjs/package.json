@@ -10,16 +10,17 @@
   "author": "axios team",
   "license": "MIT",
   "devDependencies": {
-    "mocha": "11.8.0",
-    "chai": "4.5.0"
+    "chai": "4.5.0",
+    "mocha": "7.2.0"
   },
   "overrides": {
     "mocha": {
-      "glob": "13.0.6",
-      "minimatch": "11.0.1"
+      "js-yaml": "3.15.2",
+      "glob": "7.2.3",
+      "minimatch": "3.1.5"
     },
     "glob": {
-      "minimatch": "11.0.1"
+      "minimatch": "3.1.5"
     }
   }
 }
