@@ -1,27 +1,28 @@
 {
-  "name": "@axios/cjs-module-tests",
-  "version": "1.0.0",
-  "description": "CJS module compatibility tests for axios",
-  "private": true,
-  "scripts": {
-    "test:module:cjs": "mocha --timeout 10000 \"tests/**/*.module.test.cjs\""
-  },
-  "keywords": [],
   "author": "axios team",
-  "license": "MIT",
+  "description": "CJS module compatibility tests for axios",
   "devDependencies": {
     "@types/node": "12.20.55",
     "mocha": "9.2.2",
     "typescript": "4.9.5"
   },
+  "keywords": [],
+  "license": "MIT",
+  "name": "@axios/cjs-module-tests",
   "overrides": {
-    "mocha": {
-      "minimatch": "4.2.5",
-      "js-yaml": "4.3.2",
-      "nanoid": "3.3.12"
-    },
     "glob": {
       "minimatch": "3.1.5"
-    }
-  }
+    },
+    "mocha": {
+      "js-yaml": "4.3.2",
+      "minimatch": "4.2.5",
+      "nanoid": "3.3.12"
+    },
+    "serialize-javascript": "6.0.2"
+  },
+  "private": true,
+  "scripts": {
+    "test:module:cjs": "mocha --timeout 10000 \"tests/**/*.module.test.cjs\""
+  },
+  "version": "1.0.0"
 }
